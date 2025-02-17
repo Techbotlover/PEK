@@ -1,5 +1,5 @@
 # Telegram Bot Token 
-BOT_TOKEN = "7549143860:AAFHL0hQsPResnvWmeHi-gLctmVSfmYQNAQ"
+BOT_TOKEN = ""
 
 # Log group ID 
-LOG_GROUP_ID =  -1002416068649
+LOG_GROUP_ID =  -100241606
