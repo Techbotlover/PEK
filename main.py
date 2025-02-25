@@ -6,6 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from config import BOT_TOKEN
 from pw_handler import pw_handler  # Predefined PW handler
 from kgs_handler import kgs_handler  # Predefined KGS handler
+from exam_handler import exam_hanler 
 
 # Logging setup
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
@@ -33,7 +34,8 @@ async def start(update, context):
         "𝐻𝑒𝑙𝑙𝑜 𝑢𝑠𝑒𝑟 😉 𝐼'𝑚 𝐴 𝑆𝑖𝑚𝑝𝑙𝑒 𝐵𝑎𝑡𝑐ℎ 𝑡𝑜 𝑇𝑥𝑇 𝑒𝑥𝑡𝑟𝑎𝑐𝑡𝑜𝑟 𝐵𝑜𝑡\n\n"
         "𝑈𝑠𝑒 𝑡ℎ𝑒𝑠𝑒 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠:\n"
         "🫠 /pw - 𝑓𝑜𝑟 𝑃𝑊 𝑐𝑜𝑛𝑡𝑒𝑛𝑡\n"
-        "🫠 /kgs - 𝑓𝑜𝑟 𝑲𝒉𝒂𝒏 𝑮𝒍𝒐𝒃𝒂𝒍 𝑺𝒕𝒖𝒅𝒊𝒆𝒔 𝑐𝑜𝑛𝑡𝑒𝑛𝑡"
+        "🫠 /kgs - 𝑓𝑜𝑟 𝑲𝒉𝒂𝒏 𝑮𝒍𝒐𝒃𝒂𝒍 𝑺𝒕𝒖𝒅𝒊𝒆𝒔 𝑐𝑜𝑛𝑡𝑒𝑛𝑡\n"
+        "🦋 /exam "
     )
 
 # /onowner command
@@ -95,6 +97,7 @@ def start_bot():
         # Add predefined handlers
         application.add_handler(pw_handler)
         application.add_handler(kgs_handler)
+        application.add_handler(exam_handler)
 
         # Start the bot
         logger.info("Bot is running...")
